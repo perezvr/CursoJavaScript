@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Curso JavaScript</title>
+</head>
+
+<body>
+    <div id='app'>
+        <input type="text" name="nome" id="name" />
+        <input type="text" name="nome2" />
+        <button class="botao">Adicionar</button>
+    </div>
+    <script>
+        // //Buscando por id
+        var inputElementByName = document.getElementById('nome');
+        //Buscando por tagName (retorna vetor pois pode ter mais de um elemento com o mesmo nome)
+        var inputElementByTag = document.getElementsByTagName('input');
+        //Buscando por class (retorna vetor pois pode ter mais de um elemento com o mesmo nome)
+        var inputElementByClass = document.getElementsByTagName('input');
+
+        //Query selector percorrendo a DOM
+        var inputElementByQuerySelectorDOM = document.querySelector('body div#app input');
+
+        //Query selector pelo nome
+        var inputElementByQuerySelectorName = document.querySelector('input[name=nome]');
+
+        //Query selector pelo id
+        var inputElementByQuerySelectorId = document.querySelector('#name');
+
+        //Query selector all retorna todos os elementos
+        var inputElementByQuerySelectorAll = document.querySelectorAll('input');
+
+
+        var inputElement = document.querySelector('input[name=nome]');
+        var btnElement = document.querySelector('button.botao');
+        btnElement.onclick = function () {
+            alert(inputElement.value);
+        }
+
+        console.log(inputElementByQuerySelectorAll);
+    </script>
+
+</body>
+
+</html>

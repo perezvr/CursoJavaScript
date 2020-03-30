@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Curso JavaScript</title>
+</head>
+
+<body>
+    <div id='app'>
+        <button id='btnSquare'>Ciar quadrados</button>
+    </div>
+    <script>
+
+        var btnElement = document.querySelector('#btnSquare');
+        btnElement.onclick = function () {
+            var divSquare = document.createElement('div');
+            divSquare.setAttribute('class', 'box');
+
+            divSquare.style.margin = 5;
+            divSquare.style.width = 100;
+            divSquare.style.height = 100;
+            divSquare.style.backgroundColor = '#f00';
+
+            var containerElement = document.querySelector('#app');
+            containerElement.appendChild(divSquare);
+        }
+    </script>
+
+</body>
+
+</html>

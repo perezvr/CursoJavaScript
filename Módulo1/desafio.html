@@ -1,0 +1,89 @@
+<html>
+
+<head>
+    <title> Curso JavaScript</title>
+</head>
+
+<body>
+
+
+    <script>
+        //Ex: 1
+        // function getEndereco() {
+
+        //     var endereco = {
+        //         rua: 'Rua dos pinheiros',
+        //         numero: 1293,
+        //         bairro: 'Centro',
+        //         cidade: 'Sao Paulo',
+        //         uf: 'Sp'
+        //     };
+
+        //     return `O usuário mora em ${endereco.cidade} / ${endereco.uf}, no bairro ${endereco.bairro}, na "${endereco.rua}" com nº' ${endereco.numero}`;
+        // }
+
+        // console.log(getEndereco());
+
+        //Ex2
+        // function pares(x, y) {
+        //     for (var i = x; i <= y; i++) {
+        //         if (i % 2 === 0) {
+        //             console.log(i);
+        //         }
+        //     }
+        // }
+        // pares(1, 10);
+
+        //Ex3
+        // var skills = ["Javascript", "ReactJS", "React Native"];
+
+        // function temHabilidade(sk) {
+        //     return skills.indexOf("Javascript") !== -1;
+        // }
+
+        // console.log(temHabilidade(skills));
+
+        //Ex4
+        // function getXp(anos){
+        //     if(anos<=1){
+        //         return 'Iniciante';
+        //     }
+        //     else if(anos<=3){
+        //         return 'intermediário';
+        //     }
+        //     else if(anos<=6){
+        //         return 'Avançado';
+        //     }
+        //     else {
+        //         return 'Jedi Master';
+        //     }
+        // }
+
+        // console.log(getXp(3));
+
+        //Ex5
+
+        function verificaHabilidades() {
+            usuarios = [
+                {
+                    nome: 'Diego',
+                    habilidades: ['JavaScript', 'ReactJS', 'Redux']
+                },
+                {
+                    nome: 'Gabriel',
+                    habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+                },
+            ]
+
+            for (usuario of usuarios) {
+                console.log(`O ${usuario.nome} possui as habilidades: ${usuario.habilidades.join(', ')}`);
+            }
+
+        }
+
+        verificaHabilidades();
+
+    </script>
+</body>
+
+</html>

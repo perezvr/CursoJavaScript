@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Curso JavaScript</title>
+</head>
+
+<body>
+    <div id='app'>
+        <!-- <input type="text" name="nome" /> -->
+        <input type="text" id="nome" />
+        <button class="botao">Adicionar</button>
+    </div>
+    <script>
+        var linkElement = document.createElement('a');
+        linkElement.setAttribute('href', 'http://www.uol.com.br');
+        linkElement.setAttribute('title', 'urlUol');
+
+        var textElement = document.createTextNode('Página da UOL');
+        linkElement.appendChild(textElement);
+
+        var containerElement = document.querySelector('#app');
+        containerElement.appendChild(linkElement);
+
+        var inputElement = document.querySelector('#nome');
+        //containerElement.removeChild(inputElement);
+    </script>
+
+</body>
+
+</html>
