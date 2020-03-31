@@ -6,7 +6,7 @@ function search() {
     //Pegando texto do input
     var todoText = inputElement.value;
     //Resentando a UL
-    listElements.innerHTML ='';
+    listElements.innerHTML = '';
 
     //Axios funciona como um encapsulamento do XMLHttpRequest
     axios.get(`https://api.github.com/users/${todoText}/repos`)
@@ -16,12 +16,17 @@ function search() {
                 var itemListElement = document.createElement('li');
                 var itemListText = document.createTextNode(repo.name);
 
+                var linkElement = document.createElement('a');
+                linkElement.setAttribute('href', '#');
+                linkElement.onclick = function () {
+                    openRepoInNewTab(repo.html_url, '_blank');
+                };
+                linkElement.appendChild(document.createTextNode('Acessar'));
+
                 itemListElement.appendChild(itemListText);
+                itemListElement.appendChild(linkElement);
                 listRepos.appendChild(itemListElement);
             }
-
-
-            console.log(response.data[0].id);
         })
         //Capturando o 'reject' da Promise
         .catch(function (error) {
@@ -29,7 +34,9 @@ function search() {
         });
 }
 
-
-
+function openRepoInNewTab(url) {
+    console.log(url);
+    window.open(url, '_blank');
+}
 
 buttonElement.onclick = search;
